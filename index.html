@@ -109,17 +109,10 @@
         toggleBtn.innerText = isDarkModeOn ? "☀️" : "🌓";
       });
     </script>
-<!--     <div id="listening-container" class="w-full px-4 py-5">
-      <h3 class="text-2xl font-semibold mb-4"><i class="fab fa-spotify"></i> What's on my Playlist</h3>
-      <div id="listening-list" class="flex flex-wrap mx-auto md:-mx-2 md:space-x-4">
-        <!-- Fetched Listening Markdown files will be displayed here --><!--
-      </div>
-    </div> -->
   </div>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
   <script>
-      const postsList = document.getElementById('posts-list');
     const projectsList = document.getElementById('projects-list');
     const converter = new showdown.Converter({
       simpleLineBreaks: true,
@@ -127,7 +120,7 @@
       tables: true,
     });
     const baseUrl = "https://api.github.com/repos/mkrachanko/markdown_website/contents/";
-    const folders = ['posts', 'projects', 'listening'];
+    const folders = ['projects'];
 
     async function fetchMarkdownFiles(folder) {
       const response = await fetch(`${baseUrl}${folder}`);
